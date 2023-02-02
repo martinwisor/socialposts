@@ -4,20 +4,21 @@ import PostForm from "./PostForm";
 import { useState } from "react";
 
 const SocialPost = () => {
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState<Post[]>([]);
   const [IsFormVisible, setIsFormVisible] = useState(false);
 
-  const handleSubmit = (newPost: any) => {
-    setPosts([newPost, ...posts]);
+  const handleSubmit = (newPost: Post) => {
+    setPosts([...posts, newPost]);
     setIsFormVisible(false);
   };
 
-  const handleDelete = (index: any) => {
+  const handleDelete = (index: number) => {
     setPosts(posts.filter((_, i) => i !== index));
   };
 
   return (
-    <>
+    <div>
+      <h1>My Thoughts</h1>
       <button onClick={() => setIsFormVisible(true)}>New Thoughts</button>
       <div>
         {IsFormVisible && (
@@ -35,7 +36,7 @@ const SocialPost = () => {
           onDelete={() => handleDelete(index)}
         />
       ))}
-    </>
+    </div>
   );
 };
 export default SocialPost;

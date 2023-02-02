@@ -1,6 +1,13 @@
 import React from "react";
+import Post from "../models/Post";
 
-const PostInList = ({ post, onDelete }: any) => {
+const PostInList = ({
+  post,
+  onDelete,
+}: {
+  post: Post;
+  onDelete: () => void;
+}) => {
   return (
     <div>
       <h2>{post.title}</h2>

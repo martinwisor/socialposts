@@ -1,9 +1,16 @@
 import { useState } from "react";
+import Post from "../models/Post";
 import React from "react";
-const PostForm = ({ onSubmit, onClose }: any) => {
+function PostForm({
+  onSubmit,
+  onClose,
+}: {
+  onSubmit: (post: Post) => void;
+  onClose: () => void;
+}) {
   const [title, setTitle] = useState("");
   const [thought, setThought] = useState("");
-  function handleSubmit(e: any) {
+  function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     onSubmit({ title, thought });
     setTitle("");
@@ -21,7 +28,6 @@ const PostForm = ({ onSubmit, onClose }: any) => {
         ></input>
         <label htmlFor="thought-textarea">Thought:</label>
         <textarea
-          type="text"
           id="thought-textarea"
           value={thought}
           onChange={(e) => setThought(e.target.value)}
@@ -33,6 +39,6 @@ const PostForm = ({ onSubmit, onClose }: any) => {
       </form>
     </div>
   );
-};
+}
 
 export default PostForm;
