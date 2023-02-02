@@ -9,10 +9,20 @@ const PostInList = ({
   onDelete: () => void;
 }) => {
   return (
-    <div>
-      <h2>{post.title}</h2>
-      <h2>{post.thought}</h2>
-      <button onClick={onDelete}>Delete</button>
+    <div className="textbox">
+      <table>
+        <th>
+          <h2 className="title">{post.title}</h2>
+          <tr>
+            <td>
+              <h2 className="thought">{post.thought}</h2>
+            </td>
+          </tr>
+        </th>
+        <th>
+          <button onClick={onDelete}>Delete</button>
+        </th>
+      </table>
     </div>
   );
 };

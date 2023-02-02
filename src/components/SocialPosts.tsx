@@ -19,7 +19,9 @@ const SocialPost = () => {
   return (
     <div>
       <h1>My Thoughts</h1>
-      <button onClick={() => setIsFormVisible(true)}>New Thoughts</button>
+      <button className="newthought" onClick={() => setIsFormVisible(true)}>
+        New Thought
+      </button>
       <div>
         {IsFormVisible && (
           <PostForm
