@@ -10,19 +10,11 @@ const PostInList = ({
 }) => {
   return (
     <div className="textbox">
-      <table>
-        <th>
-          <h2 className="title">{post.title}</h2>
-          <tr>
-            <td>
-              <h2 className="thought">{post.thought}</h2>
-            </td>
-          </tr>
-        </th>
-        <th>
-          <button onClick={onDelete}>Delete</button>
-        </th>
-      </table>
+      <h2 className="title">{post.title}</h2>
+
+      <h2 className="thought">{post.thought}</h2>
+
+      <button onClick={onDelete}>Delete</button>
     </div>
   );
 };

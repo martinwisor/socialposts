@@ -17,12 +17,12 @@ const SocialPost = () => {
   };
 
   return (
-    <div>
+    <div className="section">
       <h1>My Thoughts</h1>
       <button className="newthought" onClick={() => setIsFormVisible(true)}>
         New Thought
       </button>
-      <div>
+      <div className="isformvisible">
         {IsFormVisible && (
           <PostForm
             onSubmit={handleSubmit}

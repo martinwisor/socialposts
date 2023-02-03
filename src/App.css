@@ -3,7 +3,20 @@ body {
 }
 
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.section {
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-family: "Homemade Apple";
+  color: #03a9f4;
+  align-self: center;
 }
 
 .newthought {
@@ -13,11 +26,20 @@ body {
   font-weight: 700;
   border-radius: 5px;
   width: 75%;
+  align-self: center;
 }
 
-h1 {
-  font-family: "Homemade Apple";
-  color: #03a9f4;
+.isformvisible {
+  display: flex;
+}
+
+.textbox {
+  background-color: white;
+  border-bottom: 1px solid grey;
+}
+
+h2 {
+  background-color: green;
 }
 
 .title {
@@ -30,7 +52,6 @@ h1 {
   font-weight: 400;
 }
 
-.textbox {
-  background-color: white;
-  border-bottom: 1px solid grey;
+.button {
+  align-items: flex-end;
 }
